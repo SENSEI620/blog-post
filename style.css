@@ -1,0 +1,136 @@
+
+
+/* ### Font
+
+- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
+- Weights: 500, 800 */
+
+:root{
+    --yellow:#F4D04E;
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+    --font-size: 16px;
+}
+
+@font-face {
+    font-family:figtree-italic;
+    src: url(./blog-preview-card-main/assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+@font-face{
+    font-family: figtree-variable;
+    src: url(./blog-preview-card-main/assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: figtree-variable;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--yellow);
+    height: 100vh;
+    /*por causa disso aqui o body agora tem a altura ingual a toda a view height entao por causa disso o main fica no centro por que o justify-content: center ; dele fas ele ficar no meio na linha x e o align-itens: center; fas ele ficar no meio do eixo y. */
+
+    gap:2rem;
+}
+main{
+    width: 23.75rem;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 8px 8px black; 
+
+
+}
+
+
+img{
+    width: 100%;
+    border-radius: 25px;
+    
+    
+}
+
+.content{
+    
+    position: relative;
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap:0.75rem;
+
+    
+    
+}
+
+.point{
+    width: 5.5rem;
+    background-color: var(--yellow);
+    padding: 0.25rem 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    
+}
+.pul{
+    font-weight: bolder;
+}
+p{
+    font-size: 12px;
+}
+h1{
+    color:black;
+    transition: 0.5s;
+}
+h1:hover{
+    color:var(--yellow);
+}
+.text{
+    color:var(--grey);
+}
+
+
+.avatar{
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.avatar img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.sensei{
+    background-color: var(--yellow);
+    padding: 0.75rem;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 4px 4px ;
+    transition: 0.5s;
+}
+
+.sensei:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid black;
+    font-weight: bold;
+    box-shadow: 4px 4px ;
+
+    padding: 0.80rem;
+}
+
+
+@media (min-width:375px){
+    main{
+        width: 20.44rem;
+    }
+}
